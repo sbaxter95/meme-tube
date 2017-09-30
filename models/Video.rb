@@ -56,7 +56,7 @@ class Video
 	#delete
 	def self.destroy id
 		conn = self.open_connection
-		sql = "DELETE FROM video WHERE id =#{id}"
+		sql = "DELETE FROM videos WHERE id =#{id}"
 		conn.exec(sql) #run the sql
 		#Doesn't need to be in a variable and return anything - not being used - only one 
 	end

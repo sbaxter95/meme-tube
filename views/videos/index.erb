@@ -6,7 +6,7 @@
 	<a href="/videos/<%=video.id%>">View</a>
 	<a href="/videos/<%=video.id%>/edit">Edit</a>
 
-	<form action="/videos/<%=@id%>" method="POST">
+	<form action="/videos/<%=video.id%>" method="POST">
 		<input type="hidden" name="_method" value="DELETE">
 		<input type="submit" value="Delete">
 	</form>
