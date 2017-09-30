@@ -8,31 +8,36 @@ class VideoController < Sinatra::Base
 
 	set :views, Proc.new  {File.join(root, 'views')}
 
+	#index
 	get '/videos' do
 		@videos = Video.all
-		erb :"videos/index"
+	  	erb :"videos/index"
 	end
 
+	#new
 	get '/videos/new' do
 	  erb :"videos/new"
 	end
 
+	#show
 	get '/videos/:id' do
 		@id = params[:id].to_i
 		@video = Video.find(@id) 
 	  	erb :"videos/show"
 	end
 
+	#create 
 	post '/videos' do
 		new_video = Video.new
 		new_video.title = params[:title]
 		new_video.description = params[:description]
 		new_video.url = params[:url]
 		new_video.genre = params[:genre]
-		new_video.save
+		new_video.save		
 		redirect '/videos'
 	end
 
+	#edit
 	get '/videos/:id/edit' do
 		@id = params[:id].to_i
 		@video = Video.find(@id)
@@ -49,6 +54,14 @@ class VideoController < Sinatra::Base
 		@video.save
 
 		redirect "/videos/#{@id}"  
+		#video.id instead of #{@id}
+	end
+
+	#delete
+	delete '/videos/:id' do
+		id = params[:id].to_i
+		Video.destroy(id)
+		redirect '/videos'
 	end
 
 end

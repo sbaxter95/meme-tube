@@ -1,7 +1,14 @@
-<% @videos.each do |video| %>
-	<h3><%= video.title %></h3>
-	<h3><%= video.description %></h3>
-	<h3><a href="<%= video.url %>"><%= video.url %></a></h3>
-	<h3><%= video.genre %></h3>
-	<hr>
+<% @videos.each_with_index do |video, index| %>
+	<h2>Video title: <%= video.title%></h2>
+	<h3>Video description: <%= video.description%></h3>
+	<h3>Video URL: <%= video.url%></h3>
+	<h3>Video Genre: <%= video.genre%></h3>
+	<a href="/videos/<%=video.id%>">View</a>
+	<a href="/videos/<%=video.id%>/edit">Edit</a>
+
+	<form action="/videos/<%=@id%>" method="POST">
+		<input type="hidden" name="_method" value="DELETE">
+		<input type="submit" value="Delete">
+	</form>
+
 <% end %>
