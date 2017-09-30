@@ -1,6 +1,6 @@
 class Video 
 
-	attr_accessor :title, :description, :url, :genre
+	attr_accessor :id, :title, :description, :url, :genre
 
 	def self.open_connection
 		PGconn.connect(dbname: "memetube")
@@ -32,9 +32,20 @@ class Video
 		sql = "SELECT * FROM videos WHERE id =#{id}"
 		videos = conn.exec(sql)
 
-		video = self.hydrate videos[0]
+		@video = self.hydrate videos[0]
 
-		video
+		@video
+	end
+
+	def save 
+		conn = Video.open_connection
+		if !self.id 
+			sql = "INSERT INTO videos (title, description, url, genre) VALUES ('#{self.title}', '#{self.description}', '#{self.url}', '#{self.genre}')"
+		else
+			sql = "UPDATE videos SET title = '#{self.title}', description = '#{self.description}', url = '#{self.url}', genre = '#{self.genre}' WHERE id = #{self.id}"
+		end
+
+		conn.exec(sql)
 	end
 
 end
