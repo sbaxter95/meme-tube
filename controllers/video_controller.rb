@@ -13,4 +13,10 @@ class VideoController < Sinatra::Base
 		erb :"videos/index"
 	end
 
+	get '/videos/:id' do
+		@id = params[:id].to_i
+		@video = Video.find(@id) 
+	  	erb :"videos/show"
+	end
+
 end

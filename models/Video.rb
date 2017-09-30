@@ -27,5 +27,15 @@ class Video
 		video
 	end
 
+	def self.find id
+		conn = self.open_connection
+		sql = "SELECT * FROM videos WHERE id =#{id}"
+		videos = conn.exec(sql)
+
+		video = self.hydrate videos[0]
+
+		video
+	end
+
 end
 
