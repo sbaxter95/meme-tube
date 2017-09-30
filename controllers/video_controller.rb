@@ -10,7 +10,7 @@ class VideoController < Sinatra::Base
 
 	get '/videos' do
 		@videos = Video.all
-		erb :"players/index"
+		erb :"videos/index"
 	end
 
 end
