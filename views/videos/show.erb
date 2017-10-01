@@ -2,5 +2,6 @@
 	<h2>Title: <%= @video.title %></h2>
 	<h3>Description: <%= @video.description %></h3>
 	<h3>URL: <a class="link" href="<%= @video.url %>"><%= @video.url %></a></h3>
+	<iframe width="640" height="360" src="<%= @video.url %>"></iframe>
 	<h3>Genre: <%= @video.genre %></h3>
 </body>
