@@ -1,17 +1,19 @@
+<h2>New Video</h2>
+
 <form action="/videos" method="POST">
 
 	<label for="title"></label>
-	<input type="text" name="title" placeholder="Video Title">
+	<input class="new-input" type="text" name="title" placeholder="Video Title">
 
 	<label for="description"></label>
-	<textarea name="description" placeholder="Video Description"></textarea>
+	<textarea class="new-input" name="description" placeholder="Video Description"></textarea>
 
 	<label for="url"></label>
-	<input type="text" name="url" placeholder="Video URL">
+	<input class="new-input" type="text" name="url" placeholder="Video URL">
 
 	<label for="genre"></label>
-	<input type="text" name="genre" placeholder="Video Genre">	
+	<input class="new-input" type="text" name="genre" placeholder="Video Genre">	
 
-	<input type="submit" value="Save">
+	<input id="save" type="submit" value="Save">
 	
 </form>

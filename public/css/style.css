@@ -92,3 +92,57 @@ hr {
 .link {
 	background-color: #D49F12;
 }
+
+.new-input {
+	font-family: 'Mouse Memoirs', sans-serif;
+	font-size: 1em;
+	margin: 20px;
+	display: block;
+	-webkit-box-shadow: 7px 10px 26px 3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 7px 10px 26px 3px rgba(0,0,0,0.75);
+	box-shadow: 7px 10px 26px 3px rgba(0,0,0,0.75);
+}
+
+#save {
+	background-color: #D49F12;
+	width: 200px;
+	height: 50px;
+	color: white;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	font-size: 1em;
+	font-family: 'Mouse Memoirs', sans-serif;
+	border: none;
+	border-radius: 20px;
+	-webkit-box-shadow: 7px 10px 26px 3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 7px 10px 26px 3px rgba(0,0,0,0.75);
+	box-shadow: 7px 10px 26px 3px rgba(0,0,0,0.75);
+}
+
+.edit-input {
+	font-family: 'Mouse Memoirs', sans-serif;
+	font-size: 1em;
+	margin: 20px;
+	display: block;
+	-webkit-box-shadow: 7px 10px 26px 3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 7px 10px 26px 3px rgba(0,0,0,0.75);
+	box-shadow: 7px 10px 26px 3px rgba(0,0,0,0.75);
+}
+
+#update {
+	background-color: #D49F12;
+	width: 200px;
+	height: 50px;
+	color: white;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	font-size: 1em;
+	font-family: 'Mouse Memoirs', sans-serif;
+	border: none;
+	border-radius: 20px;
+	-webkit-box-shadow: 7px 10px 26px 3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 7px 10px 26px 3px rgba(0,0,0,0.75);
+	box-shadow: 7px 10px 26px 3px rgba(0,0,0,0.75);
+}

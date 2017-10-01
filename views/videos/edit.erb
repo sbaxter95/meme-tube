@@ -1,19 +1,19 @@
 <form action="/videos/<%=@id%>" method="POST">
 
 	<label for="title"></label>
-	<input type="text" name="title" value="<%= @video.title %>">
+	<input class="edit-input" type="text" name="title" value="<%= @video.title %>">
 
 	<label for="description"></label>
-	<textarea name="description"><%= @video.description %></textarea>
+	<textarea class="edit-input" name="description"><%= @video.description %></textarea>
 
 	<label for="url"></label>
-	<input type="text" name="url" value="<%= @video.url %>">
+	<input class="edit-input" type="text" name="url" value="<%= @video.url %>">
 
 	<label for="genre"></label>
-	<input type="text" name="genre" value="<%= @video.genre %>">	
+	<input class="edit-input" type="text" name="genre" value="<%= @video.genre %>">	
 
 	<input type="hidden" name="_method" value="PUT">
 
-	<input type="submit" value="Update">
+	<input id="update" type="submit" value="Update">
 	
 </form>
