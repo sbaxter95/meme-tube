@@ -2,10 +2,15 @@
 <html>
 <head>
 	<title>Memetube</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Mouse+Memoirs" rel="stylesheet">
 </head>
 <body>
-	<h1>Memetube</h1>
-	<a href="/videos/new">Create a new post</a>
-	<%= yield %>
+	<div class="container">
+		<h1>MemeTube</h1>
+		<a href="/videos/new">Create a new post</a>
+		<%= yield %>
+		<a href="/videos">Home</a>
+	</div>
 </body>
 </html>

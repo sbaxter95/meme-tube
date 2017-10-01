@@ -1,0 +1,11 @@
+body {
+	font-family: 'Mouse Memoirs', sans-serif;
+	background-color: black;
+}
+
+.container {
+	background-color: white;
+	margin: 50px;
+	padding: 50px;
+	border-radius: 20px;
+}
