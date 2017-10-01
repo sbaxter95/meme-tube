@@ -14,12 +14,17 @@ body {
 .delete {
 	width: 200px;
 	height: 50px;
-	background-color: black;
+	background-color: #006073;
 	color: white;
 	margin-top: 50px;
+	margin-bottom: 20px;
 	font-size: 1em;
 	font-family: 'Mouse Memoirs', sans-serif;
 	border: none;
+	border-radius: 20px;
+	-webkit-box-shadow: 7px 10px 26px 3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 7px 10px 26px 3px rgba(0,0,0,0.75);
+	box-shadow: 7px 10px 26px 3px rgba(0,0,0,0.75);
 }
 
 a {
@@ -27,9 +32,14 @@ a {
 	color: white;
 	padding: 10px;
 	text-decoration: none;
+	border-radius: 20px;
 	-webkit-box-shadow: 7px 10px 26px 3px rgba(0,0,0,0.75);
 	-moz-box-shadow: 7px 10px 26px 3px rgba(0,0,0,0.75);
 	box-shadow: 7px 10px 26px 3px rgba(0,0,0,0.75);
+}
+
+#logo {
+	display: inline-block;
 }
 
 #m {
@@ -37,6 +47,8 @@ a {
 	color: white;
 	padding: 10px;
 	margin-right: 10px;
+	border-radius: 20px;
+	background-color: #006073;
 }
 
 #t {
@@ -47,4 +59,36 @@ a {
 
 i {
 	margin-left: 10px;
+}
+
+#upload {
+	display: inline-block;
+	float: right;
+	margin-top: 50px;
+	background-color: #006073;
+}
+
+#home {
+	display: inline-block;
+	margin-left: 20px;
+	background-color: #006073;
+}
+
+hr {
+	border: solid 2px black;
+	-webkit-box-shadow: 1px 4px 41px 6px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 4px 41px 6px rgba(0,0,0,0.75);
+	box-shadow: 1px 4px 41px 6px rgba(0,0,0,0.75);
+}
+
+#view {
+	background-color: #D49F12;
+}
+
+#edit {
+	background-color: #D49F12;
+}
+
+.link {
+	background-color: #D49F12;
 }
