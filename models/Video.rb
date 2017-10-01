@@ -43,9 +43,9 @@ class Video
 
 	#Instead of create and update
 	def save #save is acting on the instance - instance method
-		conn = Video.open_connection,
+		conn = Video.open_connection
 		if !self.id
-			sql = "INSERT INTO videos (description, title, url, genre) VALUES ('#{self.description}', '#{self.title}', '#{self.url}, '#{self.genre}')"
+			sql = "INSERT INTO videos (description, title, url, genre) VALUES ('#{self.description}', '#{self.title}', '#{self.url}', '#{self.genre}')"
 		else
 			sql = "UPDATE videos SET title = '#{self.title}', description = '#{self.description}', url = '#{self.url}', genre = '#{self.genre}' WHERE id = #{self.id}"
 		end

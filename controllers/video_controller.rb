@@ -52,9 +52,7 @@ class VideoController < Sinatra::Base
 		@video.url = params[:url]
 		@video.genre = params[:genre]
 		@video.save
-
 		redirect "/videos/#{@id}"  
-		#video.id instead of #{@id}
 	end
 
 	#delete
