@@ -1,14 +1,16 @@
 <% @videos.each_with_index do |video, index| %>
-	<h2>Title: <%= video.title%></h2>
-	<h3>Description: <%= video.description%></h3>
-	<a class="link" href="<%= video.url%>">URL: <%= video.url%> </a> 
-	<h3>Genre: <%= video.genre%></h3>
-	<a id="view" href="/videos/<%=video.id%>">View</a>
-	<a id = "edit" href="/videos/<%=video.id%>/edit">Edit</a>
+	<div class="video-container">
+		<h2>Title: <%= video.title%></h2>
+		<h3>Description: <%= video.description%></h3>
+		<a class="link" href="<%= video.url%>">URL: <%= video.url%> </a> 
+		<h3>Genre: <%= video.genre%></h3>
+		<a id="view" href="/videos/<%=video.id%>">View</a>
+		<a id = "edit" href="/videos/<%=video.id%>/edit">Edit</a>
 
-	<form action="/videos/<%=video.id%>" method="POST">
-		<input type="hidden" name="_method" value="DELETE">
-		<input class="delete" type="submit" value="Delete">
-	</form>
-	<hr>
+		<form action="/videos/<%=video.id%>" method="POST">
+			<input type="hidden" name="_method" value="DELETE">
+			<input class="delete" type="submit" value="Delete">
+		</form>
+		<hr>
+	</div>
 <% end %>
